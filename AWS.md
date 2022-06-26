@@ -1,6 +1,6 @@
 # AWS
 ## Route 53
-This is the entry of AWS, provide Domain Name System (DNS) web services.  We can set two types host zone, public for outsite url and private for VPC connect. A public hosted zone is a container that holds information about how you want to route traffic on the internet for a specific domain whereas a private hosted zone is a container for records for a domain that you host in Amazon virtual private clouds (VPCs).  We use public host zone to route traffic to a CloudFront distribution or a web server in data center.
+This is the entry of AWS, provide Domain Name System (DNS) web services.  We can set two types host zone, public for outsite url and private for VPC connect. A public hosted zone is a container that holds information about how you want to route traffic on the internet for a specific domain whereas a private hosted zone is a container to records for a domain that you host in Amazon virtual private clouds (VPCs).  We use public host zone to route traffic to a CloudFront distribution or a web server in data center.
 ## CloudFront
 CloudFront is the AWS content delivery network (CDN), which can deliver your entire website by using a global network of edge locations. We setting /api/.. to origin service, and for default request, they are set to S3-web-frontend.  
 ![Image](./images/cloudfront.png)  
@@ -11,7 +11,7 @@ And Lambda@Edge lets you run Node.js and Python Lambda functions to customize co
  Also to enable serverless applications, API Gateway supports streamlined proxy integrations with AWS Lambda and HTTP endpoints, we usally set up proxy on HTTP API.  
  We will set a Network Load Balancer (NLB) for API Gateway private integrations. Elastic Load Balancing automatically distributes your incoming traffic across multiple targets, such as EC2 instances, containers, and IP addresses, in one or more Availability Zones. It works with EC2 and EC2 auto scaling, to run multiple containers and distributes traffic to them.
 ## VPC
-A virtual private cloud (VPC) is a virtual network in your own logically isolated area in the AWS Cloud, which provides Console, CLI, SDKs and Query APIs. We use security group acts as a virtual firewall, controlling the traffic that is allowed to reach and leave the resources. We can set  inbound and outbound IP and prot, usually for HTTPS 443. 
+A virtual private cloud (VPC) is a virtual network in your own logically isolated area in the AWS Cloud, which provides Console, CLI, SDKs and Query APIs. We use security group acts as a virtual firewall, controlling the traffic that is allowed to reach and leave the resources. We can set  inbound and outbound IP and port, usually for HTTPS 443. 
 ## CodePipeline
 ![Image](./images/pipline.png)  
 AWS CodePipeline, is a fully managed continuous delivery service that helps to automate the release pipelines for fast and reliable application and infrastructure updates. CodePipeline automates the build, test, and deploy phases of the release process every time there is a code change, based on the release model you define.   
